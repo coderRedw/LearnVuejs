@@ -1,0 +1,65 @@
+{
+  "id": "2170867",
+  "name": "tabbar",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1043314",
+      "name": " ic_tabbar_home",
+      "font_class": "tabbarhome",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "1043315",
+      "name": "ic_tabbar_home_select",
+      "font_class": "tabbarhomeselect",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "8017523",
+      "name": "tabbar",
+      "font_class": "tabbar",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "8644790",
+      "name": "tabbar-icon-Shopping Cart-on-2b",
+      "font_class": "tabbar-icon-ShoppingCart-on-b",
+      "unicode": "e7dd",
+      "unicode_decimal": 59357
+    },
+    {
+      "icon_id": "8645128",
+      "name": "tabbar-icon-Shopping Cart-on-2b",
+      "font_class": "tabbar-icon-ShoppingCart-on-b1",
+      "unicode": "e7e0",
+      "unicode_decimal": 59360
+    },
+    {
+      "icon_id": "11393616",
+      "name": "tab_bar05_h",
+      "font_class": "tab_bar_h",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "16303076",
+      "name": "tab-bar-my-p",
+      "font_class": "tab-bar-my-p",
+      "unicode": "e6d2",
+      "unicode_decimal": 59090
+    },
+    {
+      "icon_id": "16654611",
+      "name": "icon_tabbar_gzt_pressed",
+      "font_class": "icon_tabbar_gzt_pressed",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    }
+  ]
+}

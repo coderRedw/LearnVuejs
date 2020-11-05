@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <my-cpn></my-cpn>
+  <my-cpn></my-cpn>
+  <my-cpn></my-cpn>
+</div>
+<div id="app2">
+  <my-cpn></my-cpn>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  //1.创建组件构造器
+  const cpnC = Vue.extend({
+    template: `
+    <div>
+      <h2>我是标题</h2>
+      <p>我是内容，哈哈哈</p>
+      <p>我是内容，呵呵呵</p>
+    </div>`
+  })
+  //2.注册组件(全局组件)
+  // Vue.component('my-cpn',cpnC)
+
+  //疑问？怎么注册的组件才是局部组件（在vue实例里面注册就是局部组件）
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: '你好呀'
+    },
+    component: {
+      cpn:cpnC
+    }
+  })
+
+  const app2 = new Vue({
+    el: "#app2"
+  })
+  </script>
+</body>
+</html>

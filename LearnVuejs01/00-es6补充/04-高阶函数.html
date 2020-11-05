@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  const nums = [10,20,111,222,444,40,50]
+  let total2 = nums.filter(n => n < 100).map(n => n * 2).reduce((preValue,n) => preValue + n)
+  console.log(total2)  //240
+  // let total1 = nums.filter(function (n) {
+  //     return n < 100
+  // }).map(function (n) {
+  //   return n * 2
+  // }).reduce(function (preValue,n) {
+  //   return preValue + n
+  // },0)
+  // console.log(total1)  //240
+
+  //1.需求：取出所有小于100的数字
+
+  //filter中的回调函数有一个要求：必须返回一个boolean值
+  //true:当为true时，函数内部会自动将这次回调的n加入到新的数组中
+  //false:当false时，函数内部会过滤掉这次的n
+  let newNums = nums.filter(function (n) {
+      return n < 100
+  })
+  console.log(newNums)
+
+  // let newNums = []
+  // for (let n of nums) {
+  //   if (n < 100) {
+  //     newNums.push(n)
+  //   }
+  // }
+  // console.log(newNums)
+
+  //2.需求：将所有newNums小于100的数字转化： 全部* 2
+  // newNums = [10, 20, 40, 50]
+  let new2Nums = newNums.map(function (n) {
+    return n * 2
+  })
+  console.log(new2Nums)  //[20, 40, 80, 100]
+  // let new2Nums = []
+  // for (let n  of newNums) {
+  //   new2Nums.push(n * 2)
+  // }
+  // console.log(new2Nums)   //[20, 40, 80, 100]
+
+
+  //3.需求：将所有new2Nums的数据全部相加
+  // new2Nums = [20, 40, 80, 100]
+  let total = new2Nums.reduce(function (preValue, n) {
+    return preValue + n
+  },0)
+  console.log(total)   //240
+  // let total = 0;
+  // for (let n of new2Nums) {
+  //   total += n
+  // }
+  // console.log(total);   //240
+
+
+  //
+</script>
+</body>
+</html>

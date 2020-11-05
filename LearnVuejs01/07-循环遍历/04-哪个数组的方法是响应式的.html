@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li v-for="item in letters">{{itme}}</li>
+  </ul>
+  <button @click="btnClick">按钮</button>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      letters: ['a','b','c','d']
+    },
+    methods: {
+      btnClick() {
+        //1.push:从数组最后面添加元素
+        this.letters.push('aaa')
+
+        //2.pop:删除数组中的最后一个元素
+        this.letters.pop()
+
+        //3.shift:删除数组中的第一个元素
+        this.letters.shift()
+
+        //4.unshift: 在数组最前面添加元素
+        this.letters.unshift()
+
+        //5.splice:删除元素/插入元素/替换元素
+        this.letters.splice(1,2,'m','n')
+        this.letters.splice(1,0,'x','y')
+
+        //6.sort:排序
+        this.letters.sort()
+
+        //7.reverse:翻转
+        this.letters.reverse()
+
+        //注意：通过索引值修改数组中的元素不是响应式的
+        // this.letters[0] = 'bbbbbb'
+        this.letters.splice(0,1,'bbbbb')
+      }
+    }
+  })
+  </script>
+</body>
+</html>

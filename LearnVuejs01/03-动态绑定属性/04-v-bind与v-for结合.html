@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .active {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li v-for="(item,index) in movies" v-on:click="changeActive(index)" :class="{active: isActive == index}">{{item}}</li>
+  </ul>
+</div>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: '你好呀',
+      movies: ['喜洋洋','熊出没','奥特曼','小猪佩娸'],
+      isActive: 0
+    },
+    methods: {
+      changeActive: function (index) {
+        this.isActive = index
+      }
+    }
+  })
+  </script>
+</body>
+</html>

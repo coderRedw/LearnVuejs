@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <cpn></cpn>
+  <cpn></cpn>
+  <cpn ref="aaa"></cpn>
+  <button @click="btnClick">按钮</button>
+</div>
+<template id="cpn">
+  <h2>我是子组件</h2>
+</template>
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: '你好呀'
+    },
+    methods: {
+      btnClick(){
+        //1。$children
+        // console.log(this.$children)
+        // // this.$children[0].showMessage()
+        // for (let c of this.$children) {
+        //   console.log(c.name)
+        //   c.showMessage()
+        // }
+
+        // console.log(this.$children[3].name)  -->我如果在蹭插入一个组件标签呢，就又要改下标值，那么这种方法不好
+        //2.$refs(最常用)
+        console.log(this.$refs)
+        console.log(this.$refs.aaa.name)
+      }
+    },
+    components: {
+      cpn: {
+        template: "#cpn",
+        data() {
+          return {
+            name: '我是子组件的name'
+          }
+        },
+        methods: {
+          showMessage() {
+            console.log('showMessage')
+          }
+        }
+      }
+    }
+  })
+  </script>
+</body>
+</html>
